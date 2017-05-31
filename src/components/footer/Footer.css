@@ -7,5 +7,26 @@
     width: 100%;
     background-color: #fff;
     z-index: 2; 
-    
+    padding: 10px 120px 10px 10px;
+}
+.input{
+    height: 78px;
+    border:1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 30px;
+    padding: 0 30px;
+}
+.textArea{
+    padding: 0px;
+    min-height: 78px;
+}
+.btn{
+    height: 76px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    line-height: 76px;
+    width: 102px;
+    padding: 0 20px;
 }
