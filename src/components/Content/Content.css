@@ -1,0 +1,40 @@
+.chat{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+.contbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+    max-width: 70%;
+}
+.contbox>p{
+    font-size: 20px;
+    color: #999;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 26px;
+}
+.contInfo{
+    background-color: #d4d4d6;
+    border-radius: 10px;
+    min-height: 80px;
+    padding: 10px 15px;
+    line-height: 50px;
+    font-size: 30px;
+    margin-top: 10px;
+    word-break: break-all;
+}
+.chatRight{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 15px;
+}
+.chatRight .contbox>p{
+    text-align: right;
+}
+.chatRight .contbox .contInfo{
+    background-color: #80e227;
+}

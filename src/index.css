@@ -14,6 +14,9 @@ html, body, :global(#root) {
   bottom: 0;
   overflow: hidden;
 }
+:global(li){
+  list-style: none;
+}
 /*#root{
   position:absolute;
   width: 100%;
