@@ -4,15 +4,19 @@ import { routerRedux } from 'dva/router';
 export default {
   namespace: 'products',
   state: {
-    menu:'1'
+    menu:'1',
+    name:''
   },
   reducers: {
     'delete'(state, { payload: id }) {
       return state.filter(item => item.id !== id);
     },
     dataRedu(state, { payload }){
-      console.log(payload)
       return [{ name: 'antd', id: 2 }]
+    },
+    setName(state,{payload}){
+      console.log('1')
+     return 0; 
     }
   },
   effects:{

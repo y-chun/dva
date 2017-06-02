@@ -8,10 +8,24 @@ export default class Content extends React.Component {
         super(props)
         // console.log(props)
     }
-
+    typeFun = (value) => {
+        if (value.type == 'text') {
+            return (
+                <div className={content.contInfo}>
+                    {value.info}
+                </div>
+            )
+        }else if(value.type = 'img'){
+            return (
+                <div className={content.contInfo}>
+                    <img src={value.info}/>
+                </div>
+            )
+        }
+    }
     render() {
         return (
-            <div style={{ top: '90px', background: '', position: 'absolute', width: '100%', bottom: '98px', padding: '20px', overflowY: 'auto' }}>
+            <div style={{ top: '90px', background: '', position: 'absolute', width: '100%', bottom: '178px', padding: '20px', overflowY: 'auto' }}>
                 {this.props.info.map((value, i) => {
                     if (value.id == '2') {
                         return (
@@ -21,23 +35,20 @@ export default class Content extends React.Component {
                                 </div>
                                 <div className={content.contbox}>
                                     <p>{value.name}</p>
-                                    <div className={content.contInfo}>
-                                        {value.info}
-                                    </div>
+                                    {this.typeFun(value)}
                                 </div>
-                            </div>)
+                            </div>
+                        )
                     }
                     else {
                         return (
-                             <div className={content.chatRight} key={i}>
+                            <div className={content.chatRight} key={i}>
                                 <div style={{ width: '8%', height: '8%', borderRadius: '50%', overflow: 'hidden' }}>
                                     <img src='./assets/1.jpg' style={{ maxWidth: '100%' }} />
                                 </div>
                                 <div className={content.contbox}>
                                     <p>{value.name}</p>
-                                    <div className={content.contInfo}>
-                                        {value.info}
-                                    </div>
+                                    {this.typeFun(value)}
                                 </div>
                             </div>
                         )

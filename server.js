@@ -20,12 +20,11 @@ io.sockets.on('connection', function (socket) {
     var signedIn = false;  
   
     socket.on('newMessage', function (text) {  
-        console.log(text)
-        io.sockets.emit('newMessage',{  
+        socket.broadcast.emit('newMessage',{  
             name:'他',
             id:"2",
             info:text.info,
-            bs:text.bs  
+            type:text.type  
         })  
     });  
 });  

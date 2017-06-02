@@ -5,12 +5,14 @@ import PropTypes from 'prop-types';
 import Products from './routes/Products';
 import Detail from './routes/Detail';
 import App from './routes/App';
+import IndexTab from './routes/IndexTab/IndexTab'
 // import sideBar from './routes/sideBar';
 import Index from './routes/Index';
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
-      <Route path="/" component={App} />
+      <Route path="/" component={IndexTab} />
+      <Route path='/App' component={App}/>
     </Router>
   );
 }
